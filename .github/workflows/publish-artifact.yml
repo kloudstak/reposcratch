@@ -28,3 +28,6 @@ jobs:
 
       - name: Check claat binary
         run: ls -al $HOME/go/bin
+
+      - name: Create codelab artifacts
+        run: $HOME/go/bin/claat -h
