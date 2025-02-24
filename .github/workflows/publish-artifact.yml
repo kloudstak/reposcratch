@@ -35,7 +35,7 @@ jobs:
         run: ./create-artifacts.sh
 
       - name: Check created artifacts
-        run: find . -type d -name '*-artifacts' -exec ls -al {} \;
+        run: ls -al **/*-artifacts/
 
       - name: Commit and push artifacts to gh-pages
         if: github.ref == 'refs/heads/main'
@@ -43,6 +43,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git checkout -b gh-pages
+          ls -al **/*-artifacts/
           git add **/*-artifacts/
           git commit -m 'Add codelab artifacts'
           git push --force origin gh-pages
