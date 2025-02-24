@@ -43,7 +43,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git checkout -b gh-pages
-          git add '**/*-artifacts/**'
+          git add workshop1-artifacts
           git commit -m 'Add codelab artifacts'
           git push --force origin gh-pages
 
