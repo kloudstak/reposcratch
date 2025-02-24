@@ -35,7 +35,7 @@ jobs:
         run: ./create-artifacts.sh
 
       - name: Check artifacts
-        run: ls -al **/*-artifacts/**
+        run: ls -al
 
       - name: Commit and push artifacts to gh-pages
         if: github.ref == 'refs/heads/main'
