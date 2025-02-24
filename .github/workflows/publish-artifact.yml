@@ -37,15 +37,15 @@ jobs:
       - name: Check artifacts
         run: ls -al
 
-      - name: Commit and push artifacts to gh-pages
-        if: github.ref == 'refs/heads/main'
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout -b gh-pages
-          git add workshop1-artifacts
-          git commit -m 'Add codelab artifacts'
-          git push --force origin gh-pages
+      # - name: Commit and push artifacts to gh-pages
+      #   if: github.ref == 'refs/heads/main'
+      #   run: |
+      #     git config --global user.name 'github-actions[bot]'
+      #     git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      #     git checkout -b gh-pages
+      #     git add workshop1-artifacts
+      #     git commit -m 'Add codelab artifacts'
+      #     git push --force origin gh-pages
 
       # - name: Publish codelab artifacts
       #   uses: actions/upload-artifact@v4

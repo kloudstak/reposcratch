@@ -1,1 +1,1 @@
-# ks-svc-alerts
+# Kloudstak workshops
