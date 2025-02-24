@@ -33,4 +33,4 @@ jobs:
         run: ls -al sample/codelab.md
 
       - name: Create codelab artifacts
-        run: $HOME/go/bin/claat sample/codelab.md
+        run: $HOME/go/bin/claat export sample/codelab.md
