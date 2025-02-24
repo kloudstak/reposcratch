@@ -1,12 +1,12 @@
 author: Hemang Shishir
 summary: Create a CodeLab Using Markdown
-id: codelab-sample-markdown
+id: sample-artifacts
 categories: codelab,markdown
 environments: Web
 status: Published
 feedback link: https://github.com/kloudstak/workshops
 
-# CodeLab to Create a CodeLab
+# Template for creating codelab
 
 ## CodeLab Overview
 

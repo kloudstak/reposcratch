@@ -24,13 +24,27 @@ jobs:
         run: go version
 
       - name: Install claat
-        run: go install github.com/googlecodelabs/tools/claat@latest
+        run: |
+          go install github.com/googlecodelabs/tools/claat@latest
+          echo "$HOME/go/bin" >> $GITHUB_PATH
 
       - name: Check claat binary
         run: ls -al $HOME/go/bin
 
-      - name: Check file
-        run: ls -al sample/codelab.md
-
       - name: Create codelab artifacts
-        run: $HOME/go/bin/claat export sample/codelab.md
+        run: ./create-artifacts.sh
+
+      - name: Publish codelab artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: codelab-artifacts
+          path: '**/*-artifacts/**'
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: '**/*-artifacts/**'
+          publish_branch: gh-pages
+        
