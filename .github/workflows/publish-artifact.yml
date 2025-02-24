@@ -29,5 +29,8 @@ jobs:
       - name: Check claat binary
         run: ls -al $HOME/go/bin
 
+      - name: Check file
+        run: ls -al sample/codelab.md
+
       - name: Create codelab artifacts
-        run: $HOME/go/bin/claat -h
+        run: $HOME/go/bin/claat sample/codelab.md
