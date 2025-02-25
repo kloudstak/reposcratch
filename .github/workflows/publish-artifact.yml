@@ -34,19 +34,22 @@ jobs:
       - name: Create codelab artifacts
         run: ./create-artifacts.sh
 
-      - name: Check created artifacts
-        run: ls -al **/*-artifacts/
-
+      - name: Verify artifacts directories
+        run: |
+            for dir in $(find . -type d -name '*-artifacts'); do
+              ls -al "$dir"
+            done
+      
       - name: Commit and push artifacts to gh-pages
         if: github.ref == 'refs/heads/main'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git checkout -b gh-pages
-          ls -al **/*-artifacts/
-          git add **/*-artifacts/
-          git commit -m 'Add codelab artifacts'
-          git push --force origin gh-pages
+          ls -al
+        # git add **/*-artifacts/
+        # git commit -m 'Add codelab artifacts'
+        # git push --force origin gh-pages
 
 
       # - name: Publish codelab artifacts
