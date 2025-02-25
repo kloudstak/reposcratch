@@ -51,7 +51,6 @@ jobs:
           git stash
           git checkout gh-pages
           git stash pop
-          git pull
           ls -al
           echo "Add all directories containing index.html"
           for dir in $(find . -type d); do
