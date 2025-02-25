@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-02-25T04:27:17Z",
+  "id": "test1-workshop",
+  "duration": 14,
+  "title": "Test 1 Workshop",
+  "summary": "Create a CodeLab Using Markdown",
+  "source": "/home/runner/work/reposcratch/reposcratch/01-test1//test1.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "codelab",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/kloudstak/workshops",
+  "url": "test1-workshop"
+}
