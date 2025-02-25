@@ -47,9 +47,10 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git pull
           git checkout gh-pages
+          git pull
           ls -al
+          echo "Add all directories containing index.html"
           for dir in $(find . -type d); do
               if [ -f "$dir/index.html" ]; then
               git add "$dir"
