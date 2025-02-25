@@ -53,4 +53,4 @@ jobs:
           done
           git status
           git commit -m 'Add workshop codelab artifacts'
-          git push gh-pages
+          git push -f
