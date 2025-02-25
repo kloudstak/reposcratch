@@ -36,8 +36,10 @@ jobs:
 
       - name: Verify artifacts directories
         run: |
-            for dir in $(find . -type d -name '*-workshop'); do
-              ls -al "$dir"
+            for dir in $(find . -type d); do
+              if [ -f "$dir/index.html" ]; then
+              echo "Directory containg index.html $dir"
+              fi
             done
       
       - name: Commit and push artifacts to gh-pages
@@ -48,9 +50,11 @@ jobs:
           git pull
           git checkout gh-pages
           ls -al
-          for dir in $(find . -type d -name '*-workshop'); do
+          for dir in $(find . -type d); do
+              if [ -f "$dir/index.html" ]; then
               git add "$dir"
-          done
+              fi
+            done
           git status
           git commit -m 'Add workshop codelab artifacts'
           git push -f

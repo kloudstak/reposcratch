@@ -24,3 +24,10 @@ do
         fi
     done
 done
+
+for dir in ${SCRIPT_DIR}/*/
+do
+    if [ -f "$dir/index.html" ]; then
+        echo "Directory containing index.html: $dir"
+    fi
+done
