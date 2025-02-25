@@ -3,12 +3,20 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
+<<<<<<< Updated upstream
   "updated": "2025-02-25T04:27:17Z",
+=======
+  "updated": "2025-02-25T14:27:56-08:00",
+>>>>>>> Stashed changes
   "id": "test2-workshop",
   "duration": 14,
   "title": "Test 2 Workshop",
   "summary": "Create a CodeLab Using Markdown",
+<<<<<<< Updated upstream
   "source": "/home/runner/work/reposcratch/reposcratch/02-test2//test2.md",
+=======
+  "source": "/home/hemang/gitrepos/github/personal/reposcratch/02-test2//test2.md",
+>>>>>>> Stashed changes
   "theme": "",
   "status": [
     "published"
