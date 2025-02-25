@@ -51,7 +51,7 @@ jobs:
               git add "$dir"
           done
           git status
-        # git commit -m 'Add workshop codelab artifacts'
-        # git push
+          git commit -m 'Add workshop codelab artifacts'
+          git push
 
         
