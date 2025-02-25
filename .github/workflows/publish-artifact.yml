@@ -48,12 +48,17 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git pull
-          git status
+          for dir in $(find . -type d); do
+            if [ -f "$dir/index.html" ]; then
+              echo "Directory containg index.html $dir"
+              git add $dir
+            fi
+          done
           git stash
-          git status
           git checkout gh-pages
           git stash pop
-          ls -al
+          git add .
+          git status
           echo "Add all directories containing index.html"
           for dir in $(find . -type d); do
               if [ -f "$dir/index.html" ]; then
