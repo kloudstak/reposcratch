@@ -57,14 +57,14 @@ jobs:
           done
           git stash
           git status
-        # git checkout gh-pages
-        # git pull
-        # for dir in $(find . -type d); do
-        #   if [ -f "$dir/index.html" ]; then
-        #     echo "Deleting directory containing index.html: $dir"
-        #     rm -rf "$dir"
-        #   fi
-        # done
+          git checkout gh-pages
+          ls -al
+          for dir in $(find . -type d); do
+            if [ -f "$dir/index.html" ]; then
+              echo "Deleting directory containing index.html: $dir"
+              rm -rf "$dir"
+            fi
+          done
         # git stash pop
         # git add .
         # git status
