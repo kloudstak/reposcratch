@@ -47,6 +47,8 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git branch
+          git status
           git pull
           for dir in $(find . -type d); do
             if [ -f "$dir/index.html" ]; then
@@ -54,24 +56,24 @@ jobs:
               git add $dir
             fi
           done
-          git stash
-          git checkout gh-pages
-          git pull
-          for dir in $(find . -type d); do
-            if [ -f "$dir/index.html" ]; then
-              echo "Deleting directory containing index.html: $dir"
-              rm -rf "$dir"
-            fi
-          done
-          git stash pop
-          git add .
-          git status
-          echo "Add all directories containing index.html"
-          for dir in $(find . -type d); do
-              if [ -f "$dir/index.html" ]; then
-              git add "$dir"
-              fi
-            done
-          git status
-          git commit -m 'Add workshop codelab artifacts'
-          git push -f
+        # git stash
+        # git checkout gh-pages
+        # git pull
+        # for dir in $(find . -type d); do
+        #   if [ -f "$dir/index.html" ]; then
+        #     echo "Deleting directory containing index.html: $dir"
+        #     rm -rf "$dir"
+        #   fi
+        # done
+        # git stash pop
+        # git add .
+        # git status
+        # echo "Add all directories containing index.html"
+        # for dir in $(find . -type d); do
+        #     if [ -f "$dir/index.html" ]; then
+        #     git add "$dir"
+        #     fi
+        #   done
+        # git status
+        # git commit -m 'Add workshop codelab artifacts'
+        # git push -f
