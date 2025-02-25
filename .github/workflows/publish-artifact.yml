@@ -52,4 +52,4 @@ jobs:
           done
           git status
           git commit -m 'Add workshop codelab artifacts'
-          git push --force origin gh-pages
+          git push -u origin gh-pages
