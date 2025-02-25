@@ -36,7 +36,7 @@ jobs:
 
       - name: Verify artifacts directories
         run: |
-            for dir in $(find . -type d -name '*-artifacts'); do
+            for dir in $(find . -type d -name '*-workshop'); do
               ls -al "$dir"
             done
       
@@ -47,26 +47,11 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git checkout -b gh-pages
           ls -al
-          for dir in $(find . -type d -name '*-artifacts'); do
+          for dir in $(find . -type d -name '*-workshop'); do
               git add "$dir"
           done
           git status
-        # git add **/*-artifacts/
         # git commit -m 'Add codelab artifacts'
         # git push --force origin gh-pages
 
-
-      # - name: Publish codelab artifacts
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: codelab-artifacts
-      #     path: '**/*-artifacts/**'
-
-      # - name: Deploy to GitHub Pages
-      #   if: github.ref == 'refs/heads/main'
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: '**/*-artifacts/**'
-      #     publish_branch: gh-pages
         
