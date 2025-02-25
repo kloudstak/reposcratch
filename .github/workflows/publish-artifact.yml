@@ -57,6 +57,7 @@ jobs:
           done
           git stash
           git status
+          git pull
           git checkout gh-pages
           ls -al
           for dir in $(find . -type d); do
