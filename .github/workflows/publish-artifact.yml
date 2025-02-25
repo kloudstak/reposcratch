@@ -56,6 +56,7 @@ jobs:
           done
           git stash
           git checkout gh-pages
+          git pull
           for dir in $(find . -type d); do
             if [ -f "$dir/index.html" ]; then
               echo "Deleting directory containing index.html: $dir"
