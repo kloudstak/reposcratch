@@ -55,6 +55,7 @@ jobs:
               git add $dir
             fi
           done
+          git status
           git stash
           git status
           git pull
@@ -66,6 +67,7 @@ jobs:
               rm -rf "$dir"
             fi
           done
+          ls -al
           git stash pop
           git add .
           git status
