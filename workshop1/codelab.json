@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2025-02-26T00:30:58Z",
-  "id": "test2-workshop",
+  "updated": "2025-02-26T00:34:03Z",
+  "id": "workshop1",
   "duration": 14,
-  "title": "Test 2 Workshop",
+  "title": "Test 1 Workshop",
   "summary": "Create a CodeLab Using Markdown",
-  "source": "/home/runner/work/reposcratch/reposcratch/02-test2//test2.md",
+  "source": "/home/runner/work/reposcratch/reposcratch/01-workshop//workshop1.md",
   "theme": "",
   "status": [
     "published"
@@ -21,5 +21,5 @@
     "web"
   ],
   "feedback": "https://github.com/kloudstak/workshops",
-  "url": "test2-workshop"
+  "url": "workshop1"
 }
