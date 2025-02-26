@@ -66,15 +66,8 @@ jobs:
               rm -rf "$dir"
             fi
           done
-        # git stash pop
-        # git add .
-        # git status
-        # echo "Add all directories containing index.html"
-        # for dir in $(find . -type d); do
-        #     if [ -f "$dir/index.html" ]; then
-        #     git add "$dir"
-        #     fi
-        #   done
-        # git status
-        # git commit -m 'Add workshop codelab artifacts'
-        # git push -f
+          git stash pop
+          git add .
+          git status
+          git commit -m 'Add workshop codelab artifacts'
+          git push -f
