@@ -1,12 +1,12 @@
 author: Hemang Shishir
 summary: Create a CodeLab Using Markdown
-id: test2-workshop
+id: workshop1
 categories: codelab,markdown
 environments: Web
 status: Published
 feedback link: https://github.com/kloudstak/workshops
 
-# Test 2 Workshop
+# Test 1 Workshop
 
 ## Overview
 
