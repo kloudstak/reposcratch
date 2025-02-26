@@ -8,7 +8,7 @@ feedback link: https://github.com/kloudstak/workshops
 
 # Test 1 Workshop
 
-## CodeLab Overview
+## Overview
 
 Duration: 0:02:00
 
