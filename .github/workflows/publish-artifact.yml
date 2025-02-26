@@ -68,6 +68,7 @@ jobs:
             fi
           done
           ls -al
+          git add .
           git stash pop
           git add .
           git status
